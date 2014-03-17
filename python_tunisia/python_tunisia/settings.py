@@ -95,6 +95,8 @@ TEMPLATE_DIRS = (
     join(PROJECT_ROOT, "templates")
 )
 
+
+
 ROOT_URLCONF = 'python_tunisia.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -129,3 +131,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
