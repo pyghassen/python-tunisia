@@ -85,7 +85,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = 'http://localhost/static/'
+STATIC_URL = 'https://dl.dropboxusercontent.com/u/23583317/python_tunisia/'
 
 STATIC_DIR = join(PROJECT_ROOT, "static")
 
