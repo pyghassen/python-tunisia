@@ -2,6 +2,7 @@
 .ve
 
 *dev.db
+*.sqlite3
 
 *.py[cod]
 
