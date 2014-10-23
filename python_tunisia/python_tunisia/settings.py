@@ -159,10 +159,27 @@ INSTALLED_APPS = (
 SITE_ID = 1
 
 # Cache
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': '127.0.0.1:11211',
+#         'TIMEOUT': 2592000, # Max duration for memcahced 30 days
+#     }
+# }
+
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-        'TIMEOUT': 2592000, # Max duration for memcahced 30 days
-    }
+        'BACKEND': 'redis_cache.RedisCache',
+        #'LOCATION': '<host>:<port>',
+        'OPTIONS': {
+            'DB': 1,
+            'PASSWORD': 'yadayada',
+            'PARSER_CLASS': 'redis.connection.HiredisParser',
+            'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
+            'CONNECTION_POOL_CLASS_KWARGS': {
+                'max_connections': 50,
+                'timeout': 20,
+            }
+        },
+    },
 }
