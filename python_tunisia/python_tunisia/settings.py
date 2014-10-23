@@ -167,19 +167,19 @@ SITE_ID = 1
 #     }
 # }
 
-CACHES = {
-    'default': {
-        'BACKEND': 'redis_cache.RedisCache',
-        #'LOCATION': '<host>:<port>',
-        'OPTIONS': {
-            'DB': 1,
-            'PASSWORD': 'yadayada',
-            'PARSER_CLASS': 'redis.connection.HiredisParser',
-            'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
-            'CONNECTION_POOL_CLASS_KWARGS': {
-                'max_connections': 50,
-                'timeout': 20,
-            }
-        },
-    },
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'redis_cache.RedisCache',
+#         #'LOCATION': '<host>:<port>',
+#         'OPTIONS': {
+#             'DB': 1,
+#             'PASSWORD': 'yadayada',
+#             'PARSER_CLASS': 'redis.connection.HiredisParser',
+#             'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
+#             'CONNECTION_POOL_CLASS_KWARGS': {
+#                 'max_connections': 50,
+#                 'timeout': 20,
+#             }
+#         },
+#     },
+# }
