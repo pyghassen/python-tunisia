@@ -85,7 +85,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = 'https://dl.dropboxusercontent.com/u/23583317/python_tunisia/'
+STATIC_URL = 'http://www.pythontunisia.com/static/'
 
 STATIC_DIR = join(PROJECT_ROOT, "static")
 
@@ -157,3 +157,12 @@ INSTALLED_APPS = (
 )
 
 SITE_ID = 1
+
+# Cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 2592000, # Max duration for memcahced 30 days
+    }
+}

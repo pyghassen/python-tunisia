@@ -1,5 +1,6 @@
 # Python virtualenv
 .ve
+.c9
 
 *dev.db
 *.sqlite3
