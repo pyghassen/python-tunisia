@@ -159,13 +159,13 @@ INSTALLED_APPS = (
 SITE_ID = 1
 
 # Cache
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-#         'LOCATION': '127.0.0.1:11211',
-#         'TIMEOUT': 2592000, # Max duration for memcahced 30 days
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 2592000, # Max duration for memcahced 30 days
+    }
+}
 
 # CACHES = {
 #     'default': {

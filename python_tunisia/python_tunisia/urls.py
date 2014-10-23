@@ -7,10 +7,7 @@ from django.views.decorators.cache import cache_page
 urlpatterns = patterns('',
     url(
         r'^$',
-        #cache_page(60 * 60 * 24)(
-            TemplateView.as_view(template_name="home.html")
-            #)
-        ,
+        cache_page(60 * 60 * 24)(TemplateView.as_view(template_name="home.html")),
         name='home'
     ),
     url(
