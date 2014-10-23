@@ -1,3 +1,4 @@
 Django
 django-allauth
+hiredis
 django-redis-cache
