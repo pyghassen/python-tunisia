@@ -140,7 +140,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.hubic',
     # 'allauth.socialaccount.providers.instagram',
-    # 'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount.providers.linkedin',
     # 'allauth.socialaccount.providers.linkedin_oauth2',
     # 'allauth.socialaccount.providers.openid',
     # 'allauth.socialaccount.providers.persona',
@@ -166,20 +166,3 @@ CACHES = {
         'TIMEOUT': 2592000, # Max duration for memcahced 30 days
     }
 }
-
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'redis_cache.RedisCache',
-#         #'LOCATION': '<host>:<port>',
-#         'OPTIONS': {
-#             'DB': 1,
-#             'PASSWORD': 'yadayada',
-#             'PARSER_CLASS': 'redis.connection.HiredisParser',
-#             'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
-#             'CONNECTION_POOL_CLASS_KWARGS': {
-#                 'max_connections': 50,
-#                 'timeout': 20,
-#             }
-#         },
-#     },
-# }
