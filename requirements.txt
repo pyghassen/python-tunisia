@@ -1,5 +1,4 @@
 Django
 django-allauth
-#hiredis
-#django-redis-cache
 python3-memcached
+django-contactme
