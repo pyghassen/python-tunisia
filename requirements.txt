@@ -1,4 +1,4 @@
 Django
 django-allauth
 python3-memcached
-django-contactme
+https://github.com/danirus/django-contactme/zipball/master

@@ -153,7 +153,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.vk',
     # 'allauth.socialaccount.providers.weibo',
     # 'allauth.socialaccount.providers.xing',
-    # ...
+    'django_contactme',
 )
 
 SITE_ID = 1
