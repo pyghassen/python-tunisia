@@ -166,3 +166,19 @@ CACHES = {
         'TIMEOUT': 2592000, # Max duration for memcahced 30 days
     }
 }
+
+
+EMAIL_HOST          = "smtp.gmail.com" 
+EMAIL_PORT          = "587"
+EMAIL_HOST_USER     = "ghassen.telmoudi@gmail.com"
+EMAIL_HOST_PASSWORD = "secret"
+EMAIL_USE_TLS       = True # Yes for Gmail
+DEFAULT_FROM_EMAIL  = "Pythonista <pythonista@example.com>"
+SERVER_EMAIL        = DEFAULT_FROM_EMAIL
+
+# Fill in actual EMAIL settings above, and comment out the 
+# following line to let this django demo sending emails
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# CONTACTME_SALT = b"es-war-einmal-una-bella-princesa-in-a-beautiful-castle"
+# CONTACTME_NOTIFY_TO = "Ghassen Telmoudi <ghassen.telmoudi@gmail.com>"
