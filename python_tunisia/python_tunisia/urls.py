@@ -18,6 +18,14 @@ urlpatterns = patterns('',
         ,
         name='about'
     ),
+    url(
+        r'^download/$',
+        #cache_page(60 * 60 * 24)(
+            TemplateView.as_view(template_name="download.html")
+            #)
+        ,
+        name='download'
+    ),
 
     url(r'^admin/', include(admin.site.urls)),
     (r'^accounts/', include('allauth.urls')),
