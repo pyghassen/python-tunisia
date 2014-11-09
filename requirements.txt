@@ -2,3 +2,5 @@ Django
 django-allauth
 python3-memcached
 https://github.com/danirus/django-contactme/zipball/master
+request
+BeautifulSoup
