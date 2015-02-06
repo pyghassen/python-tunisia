@@ -3,12 +3,10 @@ from django.views.generic import TemplateView
 from bs4 import BeautifulSoup
 
 
-SEARCH_URL = "".join(
-    [
-    "http://tanitjobs.com/search-results-jobs/?action=search&listing_type%5B",
-    "equal%5D=Job&keywords%5Ball_words%5D=python&JobCategory%5Bmulti_like%5",
+SEARCH_URL = (
+    "http://tanitjobs.com/search-results-jobs/?action=search&listing_type%5B"
+    "equal%5D=Job&keywords%5Ball_words%5D=python&JobCategory%5Bmulti_like%5"
     "D%5B%5D="
-    ]
 )
 
 
