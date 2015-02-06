@@ -154,6 +154,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.weibo',
     # 'allauth.socialaccount.providers.xing',
     'django_contactme',
+    "events"
 )
 
 SITE_ID = 1

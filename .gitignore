@@ -2,6 +2,9 @@
 .ve
 .c9
 
+# Django migrations
+*/migrations/*
+
 *dev.db
 *.sqlite3
 
