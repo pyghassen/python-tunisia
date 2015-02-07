@@ -78,6 +78,7 @@ INSTALLED_APPS = (
     "events",
     "companies",
     "developers",
+    "sponsors",
 )
 
 MIDDLEWARE_CLASSES = (
