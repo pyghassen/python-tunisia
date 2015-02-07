@@ -8,8 +8,8 @@ class CompaniesManager(Manager):
     """
     Companies Manager class.
     """
-    def get_query_set(self):
+    def get_queryset(self):
         """
         Returns the active companies only.
         """
-        return super().get_query_set().filter(is_active=True)
+        return super().get_queryset().filter(is_active=True)

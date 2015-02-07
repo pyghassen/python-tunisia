@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
-from django.views.decorators.cache import cache_page
+# from django.views.decorators.cache import cache_page
+
 from jobs.views import JobView
 
 
