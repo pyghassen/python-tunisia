@@ -1,7 +1,4 @@
 """
-Events model module.
-"""
-"""
 Event model module.
 """
 from django.db import models
