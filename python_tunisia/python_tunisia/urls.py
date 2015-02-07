@@ -8,50 +8,63 @@ from jobs.views import JobView
 urlpatterns = patterns('',
     url(
         r'^$',
-        # cache_page(60 * 60 * 24)(
-            TemplateView.as_view(template_name="home.html"),
-            # ),
+        TemplateView.as_view(template_name="home.html"),
         name='home'
     ),
     url(
         r'^about/$',
-        #cache_page(60 * 60 * 24)(
-            TemplateView.as_view(template_name="about.html")
-            #)
-        ,
+        TemplateView.as_view(template_name="about.html"),
         name='about'
     ),
     url(
         r'^download/$',
-        #cache_page(60 * 60 * 24)(
-            TemplateView.as_view(template_name="download.html")
-            #)
-        ,
+        TemplateView.as_view(template_name="download.html"),
         name='download'
     ),
     url(
         r'^jobs/$',
-        #cache_page(60 * 60 * 24)(
-            JobView.as_view(template_name="jobs.html")
-            #)
-        ,
+        JobView.as_view(template_name="jobs.html"),
         name='jobs'
     ),
     url(
         r'^events/$',
-        #cache_page(60 * 60 * 24)(
-            "events.views.list_events_view"
-            #)
-        ,
+        "events.views.list_events_view",
         name='events'
     ),
     url(
         r'^events/(?P<pk>\d+)$',
-        #cache_page(60 * 60 * 24)(
-            "events.views.event_details_view"
-            #)
-        ,
+        "events.views.event_details_view",
         name='event_details_view'
+    ),
+    url(
+        r'^companies/$',
+        "companies.views.list_companies_view",
+        name='companies'
+    ),
+    url(
+        r'^companies/(?P<pk>\d+)$',
+        "companies.views.company_details_view",
+        name='company_details_view'
+    ),
+    url(
+        r'^developers/$',
+        "developers.views.list_developers_view",
+        name='developers'
+    ),
+    url(
+        r'^developers/(?P<pk>\d+)$',
+        "developers.views.developer_details_view",
+        name='developer_details_view'
+    ),
+    url(
+        r'^sponsors/$',
+        "sponsors.views.list_sponsors_view",
+        name='sponsors'
+    ),
+    url(
+        r'^sponsors/(?P<pk>\d+)$',
+        "sponsors.views.sponsor_details_view",
+        name='sponsor_details_view'
     ),
 
     url(r'^admin/', include(admin.site.urls)),

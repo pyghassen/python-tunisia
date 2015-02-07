@@ -1,14 +1,14 @@
 """
-Event Manager module.
+Events Manager module.
 """
 from datetime import datetime
 
 from django.db.models import Manager
 
 
-class EventManager(Manager):
+class EventsManager(Manager):
     """
-    Event Manager class.
+    Events Manager class.
     """
     def past_events(self):
         """
