@@ -8,7 +8,9 @@ from jobs.views import JobView
 urlpatterns = patterns('',
     url(
         r'^$',
-        cache_page(60 * 60 * 24)(TemplateView.as_view(template_name="home.html")),
+        # cache_page(60 * 60 * 24)(
+            TemplateView.as_view(template_name="home.html"),
+            # ),
         name='home'
     ),
     url(
@@ -35,9 +37,25 @@ urlpatterns = patterns('',
         ,
         name='jobs'
     ),
+    url(
+        r'^events/$',
+        #cache_page(60 * 60 * 24)(
+            "events.views.list_events_view"
+            #)
+        ,
+        name='events'
+    ),
+    url(
+        r'^events/(?P<pk>\d+)$',
+        #cache_page(60 * 60 * 24)(
+            "events.views.event_details_view"
+            #)
+        ,
+        name='event_details_view'
+    ),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'^accounts/', include('allauth.urls')),
-    url(r'^accounts/profile/$', TemplateView.as_view(template_name='profile.html')),
+    # (r'^accounts/', include('allauth.urls')),
+    # url(r'^accounts/profile/$', TemplateView.as_view(template_name='profile.html')),
     url(r'^contact/', include('django_contactme.urls')),
 )

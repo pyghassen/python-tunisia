@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block active_nav %}
+	<li><a href="{% url 'home' %}">Home</a></li>
+	<li class="active"><a href="{% url 'events' %}">Events</a></li>
+	<li><a href="#">Companies</a></li>
+	<li><a href="#">Developers</a></li>
+	<li><a href="#">Sponsors</a></li>
+	<li><a href="{% url 'jobs' %}">Jobs</a></li>
+	<li><a href="{% url 'download' %}">Downloads</a></li>
+	<li><a href="{% url 'contactme-get-contact-form' %}">Contact</a></li>
+	<li><a href="{% url 'about' %}">About</a></li>
+{% endblock active_nav %}
+
+{% block content %}
+<div class="raw">
+	<div>
+		<h1>{{ object.name }}</h1>
+	</div>
+</div>
+<div class="raw">
+	<div>
+		<p>The event were hosted by <a href="{{ object.host_website }}">{{ object.host_name }}</a> in {{ object.hosted_in }}.</p>
+	</div>
+	
+</div>
+<div class="raw">
+	<div>
+		<p>{{ object.description }}</p>
+	</div>
+	
+</div>
+<div class="raw">
+	<h3>Location:</h3>
+	<div>
+		<iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCw_7gsAmsM9V82FiVlwhg__lOEsoL3t8U
+    &q={{ object.hosted_in }}">
+		</iframe>
+	</div>
+	
+</div>
+
+{% endblock %}

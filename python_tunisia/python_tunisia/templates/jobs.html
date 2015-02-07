@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
+{% block active_nav %}
+	<li><a href="{% url 'home' %}">Home</a></li>
+	<li><a href="{% url 'events' %}">Events</a></li>
+	<li><a href="#">Companies</a></li>
+	<li><a href="#">Developers</a></li>
+	<li><a href="#">Sponsors</a></li>
+	<li class="active"><a href="{% url 'jobs' %}">Jobs</a></li>
+	<li><a href="{% url 'download' %}">Downloads</a></li>
+	<li><a href="{% url 'contactme-get-contact-form' %}">Contact</a></li>
+	<li><a href="{% url 'about' %}">About</a></li>
+{% endblock active_nav %}
+
 {% block content %}
+<h1>Python jobs in Tunisia</h1>
 
 <ul>
 {% for job in jobs %}
