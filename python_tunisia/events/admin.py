@@ -3,7 +3,7 @@ Event Admin module.
 """
 from django.contrib import admin
 
-from .models import Event
+from events.models import Event
 
 
 class EventAdmin(admin.ModelAdmin):
@@ -14,5 +14,5 @@ class EventAdmin(admin.ModelAdmin):
         "name", 'date', 'hosted_in', "created_at",
     )
 
-
 admin.site.register(Event, EventAdmin)
+
