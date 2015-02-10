@@ -41,6 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     # The Django sites framework is required
     'django.contrib.sites',
 
@@ -61,7 +63,7 @@ INSTALLED_APPS = (
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.hubic',
     # 'allauth.socialaccount.providers.instagram',
-    'allauth.socialaccount.providers.linkedin',
+    # 'allauth.socialaccount.providers.linkedin',
     # 'allauth.socialaccount.providers.linkedin_oauth2',
     # 'allauth.socialaccount.providers.openid',
     # 'allauth.socialaccount.providers.persona',
@@ -126,6 +128,12 @@ USE_TZ = True
 STATIC_URL = 'http://www.pythontunisia.com/static/'
 
 STATIC_DIR = join(PROJECT_ROOT, "static")
+
+# TEMPLATE_LOADERS = (
+    # 'django.template.loaders.filesystem.Loader',
+    # 'django.template.loaders.app_directories.Loader',
+    # 'django.template.loaders.eggs.Loader',
+# )
 
 TEMPLATE_DIRS = (join(PROJECT_ROOT, "templates"), )
 

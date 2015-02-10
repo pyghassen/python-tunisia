@@ -1,3 +1,16 @@
-#from django.test import TestCase
+"""
+Event test module.
+"""
+from django.test import TestCase
 
-# Create your tests here.
+
+class EventTestCase(TestCase):
+	"""
+	Event Test Case class.
+	"""
+	pass
+
+	def test_create_event(self):
+		"""
+		"""
+		pass

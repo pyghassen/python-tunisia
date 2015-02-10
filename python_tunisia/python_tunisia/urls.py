@@ -69,7 +69,7 @@ urlpatterns = patterns('',
     ),
 
     url(r'^admin/', include(admin.site.urls)),
-    # (r'^accounts/', include('allauth.urls')),
-    # url(r'^accounts/profile/$', TemplateView.as_view(template_name='profile.html')),
+    (r'^accounts/', include('allauth.urls')),
+    url(r'^accounts/profile/$', TemplateView.as_view(template_name='profile.html')),
     url(r'^contact/', include('django_contactme.urls')),
 )

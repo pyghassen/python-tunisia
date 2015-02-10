@@ -1,9 +1,16 @@
 """
 Developers views module.
 """
-from django.views.generic import ListView, DetailView
 from developers.models import Developer
+from django.views.generic import CreateView
+from django.views.generic import ListView, DetailView
 
+
+class CreateDeveloperView(CreateView):
+	"""
+	Create Developer View class.
+	"""
+	model = Developer
 
 class ListDevelopersView(ListView):
     """

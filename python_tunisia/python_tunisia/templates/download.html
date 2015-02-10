@@ -3,9 +3,9 @@
 {% block active_nav %}
     <li><a href="{% url 'home' %}">Home</a></li>
     <li><a href="{% url 'events' %}">Events</a></li>
-    <li><a href="#">Companies</a></li>
-    <li><a href="#">Developers</a></li>
-    <li><a href="#">Sponsors</a></li>
+    <li><a href="{% url 'companies' %}">Companies</a></li>
+    <li><a href="{% url 'developers' %}">Developers</a></li>
+    <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
     <li><a href="{% url 'jobs' %}">Jobs</a></li>
     <li class="active"><a href="{% url 'download' %}">Downloads</a></li>
     <li><a href="{% url 'contactme-get-contact-form' %}">Contact</a></li>
